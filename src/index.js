@@ -5,12 +5,12 @@ import CurrencyExchange from './js/currency';
 
 // Business Logic
 
-async function getAus(usa) {
-  const response = await CurrencyExchange.getAustralia(usa);
+async function getRates() {
+  const response = await CurrencyExchange.getRates();
   if (response.ok) {
-    showCurrency(response, usa);
+    showCurrency(response);
   } else {
-    showError(response, usa);
+    showError(response);
   }
 }
 
@@ -28,7 +28,7 @@ function formSubmission (event) {
   event.preventDefault();
   const usa = document.querySelector("#usd").value;
   document.querySelector("#usd").value = null;
-  getAus(usa);
+  getRates(usa);
 }
 
 window.addEventListener("load", function() {
