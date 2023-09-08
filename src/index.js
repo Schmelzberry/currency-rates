@@ -16,22 +16,21 @@ async function getRates() {
 
 // UI Logic
 
-function showEuro(response) {
+function showResults(amount, targetCurrency, conversionRates) {
   const displayResults = document.querySelector("#displayResults");
-  const euroCode = "EUR";
-  const euroRate = response.conversion_rates[euroCode];
-
-  if (euroRate !== undefined) {
-    displayResults.innerText = `The conversion rate for USD to ${euroCode} is: ${euroRate}`;
+  
+  if (conversionRates.hasOwnProperty(targetCurrency)) {
+    const convertedAmount = amount * conversionRates[targetCurrency];
+    displayResults.innerText = `Converted amount: ${amount} USD = ${convertedAmount} ${targetCurrency}`;
   } else {
-    displayResults.innerText = `Currency code "${euroCode}" not found in conversion rates.`;
+    displayResults.innerText = `Currency code "${targetCurrency}" not found in conversion rates.`;
   }
 }
 
 
-function showError(error, response) {
+function showError(error) {
   const displayResults = document.querySelector("#displayResults");
-  displayResults.innerText = `There was an error converting value of $USD in ${error.message} ${response.conversion_rates}.`;
+  displayResults.innerText = `Error: ${error.message}`;
 }
 
 function formSubmission (event) {
