@@ -7,8 +7,8 @@ import CurrencyExchange from './js/currency';
 
 async function getRates() {
   const response = await CurrencyExchange.getRates();
-  if (response.ok) {
-    showCurrency(response);
+  if (response.conversion_rates) {
+    showCurrency(response.conversion_rates);
   } else {
     showError(response);
   }

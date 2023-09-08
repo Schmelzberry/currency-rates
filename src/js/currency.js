@@ -13,7 +13,9 @@ export default class CurrencyExchange {
         const errorMessage = `${APIresponse.status} ${APIresponse.statusText} ${JSONresponse.message}`;
         throw new Error(errorMessage);
       }
+      console.log(JSONresponse);
       return JSONresponse;
+      
     } catch(error) {
       return error;
     }
