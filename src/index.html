@@ -13,6 +13,14 @@
     <form>
       <label for="usd">Dolla Bills 4 X-Change</label>
       <input id="usd" type="number" name="usd">
+      <label for="otherCurrency">Select the currencies you'd like to compare:</label>
+      <select id="otherCurrency" name="otherCurrency" >
+        <option value="EUR">Euro(€)</option>
+        <option value="AUD">Australian Dollar(AU$)</option>
+        <option value="GBP">Pound Sterling(£)</option>
+        <option value="CZK">Koruna/Crown(Kč)</option>
+        <option value="LBP">Pound/Lira(LL/ ل.ل)</option>
+      </select>
       <button type="submit" id="dolla">Show me the money</button>
     </form>
     <p id="displayResults"></p>
