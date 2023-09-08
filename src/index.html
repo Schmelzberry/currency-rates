@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currency Rates</title>
 </head>
 <body>
-  <h3>HTML is live!</h3>
-  <img src="./assets/images/will.jpg" alt="will ferrel!">
+  <div class="container">
+    <h1>$USD Exchange Rates:</h1>
+    <p>Enter the number of $USD you need to be converted in form below!</p>
+
+    <form>
+      <label for="usd">Dolla Bills 4 X-Change</label>
+      <input id="usd" type="number" name="usd">
+      <button type="submit" id="dolla">Show me the money</button>
+    </form>
+    <p id="displayResults"></p>
+  </div>
 </body>
 </html>
