@@ -7,10 +7,10 @@ import CurrencyExchange from './js/currency';
 
 async function getRates() {
   const response = await CurrencyExchange.getRates();
-  if (response.conversion_rates) {
+  if (response.result === "success") {
     showEuro(response);
   } else {
-    showError(response);
+    showError(response.result);
   }
 }
 
@@ -19,7 +19,7 @@ async function getRates() {
 function showEuro(response) {
   const displayResults = document.querySelector("#displayResults");
   const euroCode = "EUR";
-  const euroRate = response.conversion_rates[currencyCode1];
+  const euroRate = response.conversion_rates[euroCode];
 
   if (euroRate !== undefined) {
     displayResults.innerText = `The conversion rate for USD to ${euroCode} is: ${euroRate}`;
@@ -29,8 +29,9 @@ function showEuro(response) {
 }
 
 
-function showError(error, currency) {
-  document.querySelector("#displayResults").innerText = `There was an error converting value of $USD in ${currency}: is ${error}.`;
+function showError(error, response) {
+  const displayResults = document.querySelector("#displayResults");
+  displayResults.innerText = `There was an error converting value of $USD in ${error.message} ${response.conversion_rates}.`;
 }
 
 function formSubmission (event) {
