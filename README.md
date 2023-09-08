@@ -31,8 +31,16 @@
 * html-loader: "4.2.0"
 
 ## Description
-A Template Repo set up for automatic testing with Jest.
+A website for determining exchange rates between the U.S Dollar and the following countries: 
 ## Setup/Installation Requirements
+API Key Install
+* go to this link, make an account [https://www.exchangerate-api.com/]
+* on dashboard of exchangerate-api.com, copy API key from 'API Keys' tab
+* From your terminal, navigate to your desktop directory and use command `git clone https://github.com/Schmelzberry/currency-rates.git`
+* In root of project folder, create a .env file.
+* Within .env, type the following line into the top of the file `API_KEY=[your api key]`
+
+#### NOTE: Do not include '[ ]' when pasting your link into .env
 
 * Installing all packages with $ npm install.
 * Building the project using webpack with $ npm run build
