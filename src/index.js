@@ -13,6 +13,7 @@ async function getRates() {
 // UI Logic
 
 function showResults(amount, targetCurrency, conversionRates) {
+  amount = document.querySelector("#usd").value;
   const displayResults = document.querySelector("#displayResults");
 
   if (conversionRates[targetCurrency] !== undefined) {
@@ -32,7 +33,7 @@ function showError(error) {
 function formSubmission(event) {
   event.preventDefault();
   const userAmount = document.querySelector("#usd").value;
-  const targetCurrency = document.querySelector("#newCurrency")
+  const targetCurrency = document.querySelector("#newCurrency").value;
 
   if (isNaN(userAmount)) {
     showError(new Error("Please enter a valid number!"));
