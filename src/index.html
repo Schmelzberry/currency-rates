@@ -6,14 +6,13 @@
   <title>Currency Rates</title>
 </head>
 <body>
-  <div class="container">
-    <h1>USD Exchange Rates:</h1>
-    <p>Enter the number of $USD you need to be converted in form below!</p>
-
+  <h1>USD Exchange Rates:</h1>
+  <div class="container-XL">
+    <p>Enter the amount of $USD you need to be converted in form below!</p>
     <form>
-      <label for="usd"></label>
-      <input id="usd" type="number" name="usd">
-      <label for="newCurrency">Select the currencies you'd like to compare:</label>
+      <label for="usd"><strong>$USD to exchange : </strong></label>
+      <input id="usd" type="number" name="usd"><br>
+      <label for="newCurrency"><strong>Select the currencies you'd like to compare:</strong></label>
       <select id="newCurrency" name="newCurrency" >
         <option value="AUD">Australian Dollar(AU$/AUD)</option>
         <option value="CZK">Koruna/Crown(Kč/CZK)</option>
@@ -27,8 +26,9 @@
         <option value="TMT">Manat(ر.س/TMT)</option>
       </select>
       <button type="submit" id="dolla">Show me the money</button>
-    </form>
+    </form><br>
     <p id="displayResults"></p>
   </div>
 </body>
+
 </html>

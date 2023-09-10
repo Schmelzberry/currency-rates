@@ -30,24 +30,25 @@
  * html-loader: "4.2.0"
 
 ## Description
-A website for determining exchange rates between the U.S Dollar and the following currencies: Australian Dollar, Koruna/Crown, Euro, Pound Sterling, Indian Rupee, Lira, Kina, Riyal, Manat.
+A website for determining exchange rates between the U.S Dollar and the following currencies: Australian Dollar, Koruna/Crown, Euro, Pound Sterling, Indian Rupee, Lira, Kina, Riyal, and Manat.
 ## Setup/Installation Requirements
 * Go to the following link and make an account, [Exchange Rate API](https://www.exchangerate-api.com/).
-* On the dashboard of exchangerate-api.com, locate API key which is found under the 'API Keys' tab.
+* On the dashboard of [Exchange Rate API](https://www.exchangerate-api.com/), locate API key which is found under the 'API Keys' tab.
 * From your terminal, navigate to your desktop directory and use command `git clone https://github.com/Schmelzberry/currency-rates.git`
 * In root of project folder, create a .env file to store your API key safely.
 * Within .env, type the following line into the top of the file `API_KEY=[your api key]`
 *NOTE* - Do not include '[ ]' when pasting your key into line above.
-* Install all  necessary packages with `$ npm install`.
-* Building the project using webpack with $ npm run build
-* Starting a development server with $ npm run start
-* Linting JS files in the src folder with $ npm run lint
-* Running tests with Jest using $ npm run test
+* Install all projects packages with `$ npm install`.
+* Build the project using webpack with `$ npm run build`
+* Start a development server to view project in browser with `$ npm run start`
+* Lint JS files in the src folder with `$ npm run lint`
+
+
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs
+
 
 ## License
 

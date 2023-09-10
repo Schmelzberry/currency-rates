@@ -1,16 +1,10 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import CurrencyExchange from './js/currency';
-
-// Business Logic
-
-async function getRates() {
-  const response = await CurrencyExchange.getRates();
-  return response.conversion_rates;
-}
+import getRates from './js/currency';
 
 // UI Logic
+
 
 function showResults(amount, targetCurrency, conversionRates) {
   amount = document.querySelector("#usd").value;
