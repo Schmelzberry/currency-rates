@@ -7,19 +7,15 @@ import CurrencyExchange from './js/currency';
 
 async function getRates() {
   const response = await CurrencyExchange.getRates();
-  if (response.result === "success") {
-    showEuro(response);
-  } else {
-    showError(response.result);
-  }
+  return response.conversion_rates;
 }
 
 // UI Logic
 
 function showResults(amount, targetCurrency, conversionRates) {
   const displayResults = document.querySelector("#displayResults");
-  
-  if (conversionRates.hasOwnProperty(targetCurrency)) {
+
+  if (conversionRates[targetCurrency] !== undefined) {
     const convertedAmount = amount * conversionRates[targetCurrency];
     displayResults.innerText = `Converted amount: ${amount} USD = ${convertedAmount} ${targetCurrency}`;
   } else {
@@ -33,13 +29,25 @@ function showError(error) {
   displayResults.innerText = `Error: ${error.message}`;
 }
 
-function formSubmission (event) {
+function formSubmission(event) {
   event.preventDefault();
-  const usa = document.querySelector("#usd").value;
-  document.querySelector("#usd").value = null;
-  getRates(usa);
+  const userAmount = document.querySelector("#usd").value;
+  const targetCurrency = document.querySelector("#newCurrency")
+
+  if (isNaN(userAmount)) {
+    showError(new Error("Please enter a valid number!"));
+    return;
+  }
+
+  getRates()
+    .then((conversionRates) => {
+      showResults(userAmount, targetCurrency, conversionRates);
+    })
+    .catch((error) => {
+      showError(error);
+    });
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   document.querySelector("form").addEventListener("submit", formSubmission);
 });
