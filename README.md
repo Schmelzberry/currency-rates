@@ -43,12 +43,9 @@ A website for determining exchange rates between the U.S Dollar and the followin
 * Start a development server to view project in browser with `$ npm run start`
 * Lint JS files in the src folder with `$ npm run lint`
 
-
-
 ## Known Bugs
 
 * No known bugs
-
 
 ## License
 
