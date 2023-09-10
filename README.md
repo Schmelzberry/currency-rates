@@ -1,21 +1,20 @@
-# (Application Name)
+# $USD Exchange Rates
 
-#### (Brief Description of Application)
+###  A website for determining exchange rates between the U.S Dollar and several foreign currencies.
 
-#### By (Your Name Here)
+### By: Jake Elsberry
 
 ## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
-* Bootstrap - 5.3.1
+* Bootstrap - v5.3.1
 * Node.js - v18.17.1
 * Node Package Manager - v9.8.1
-* Webpack - 5.88.2
-* Babel - 7.22.11
-* Jest - 29.6.4
-* ESLint - 8.48.0
+* Webpack - v5.88.2
+* Babel - v7.22.11
+* ESLint - v8.48.0
 
 #### Plug-Ins, Loaders
 
@@ -27,22 +26,19 @@
  * style-loader: "3.3.3"
  * webpack-cli: "5.1.4"
  * webpack-dev-server: "4.15.1"
- * @babel/ plugin-transform-modules-commonjs: "7.22.11"
-* html-loader: "4.2.0"
+ * babel/plugin-transform-modules-commonjs: "7.22.11"
+ * html-loader: "4.2.0"
 
 ## Description
-A website for determining exchange rates between the U.S Dollar and the following countries: 
+A website for determining exchange rates between the U.S Dollar and the following currencies: Australian Dollar, Koruna/Crown, Euro, Pound Sterling, Indian Rupee, Lira, Kina, Riyal, Manat.
 ## Setup/Installation Requirements
-API Key Install
-* go to this link, make an account [https://www.exchangerate-api.com/]
-* on dashboard of exchangerate-api.com, copy API key from 'API Keys' tab
+* Go to the following link and make an account, [Exchange Rate API](https://www.exchangerate-api.com/).
+* On the dashboard of exchangerate-api.com, locate API key which is found under the 'API Keys' tab.
 * From your terminal, navigate to your desktop directory and use command `git clone https://github.com/Schmelzberry/currency-rates.git`
-* In root of project folder, create a .env file.
+* In root of project folder, create a .env file to store your API key safely.
 * Within .env, type the following line into the top of the file `API_KEY=[your api key]`
-
-#### NOTE: Do not include '[ ]' when pasting your link into .env
-
-* Installing all packages with $ npm install.
+*NOTE* - Do not include '[ ]' when pasting your key into line above.
+* Install all  necessary packages with `$ npm install`.
 * Building the project using webpack with $ npm run build
 * Starting a development server with $ npm run start
 * Linting JS files in the src folder with $ npm run lint
